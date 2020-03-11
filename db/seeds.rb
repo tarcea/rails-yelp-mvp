@@ -19,6 +19,16 @@ puts 'Creating fake restaurants'
     category: Restaurant.categories.sample
   )
   restaurant.save
+
+  5.times do
+  review = Review.new(
+    content: Faker::ChuckNorris.fact,
+    rating: rand(0..5),
+    restaurant: restaurant
+  )
+  review.save!
 end
 
-puts 'Finished!'
+end
+
+
