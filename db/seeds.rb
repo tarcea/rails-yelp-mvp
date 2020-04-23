@@ -21,14 +21,11 @@ puts 'Creating fake restaurants'
   restaurant.save
 
   5.times do
-  review = Review.new(
-    content: Faker::ChuckNorris.fact,
-    rating: rand(0..5),
-    restaurant: restaurant
-  )
-  review.save!
+    review = Review.new(
+      content: Faker::ChuckNorris.fact,
+      rating: rand(0..5),
+      restaurant: restaurant
+    )
+    review.save!
+  end
 end
-
-end
-
-

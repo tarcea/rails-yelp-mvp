@@ -1,5 +1,5 @@
 <h1>Restaurants</h1>
-
+<table>
 <tbody>
     <% @restaurants.each do |restaurant| %>
       <ul>
@@ -17,4 +17,5 @@
   </tbody>
 </table>
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+
+<%= link_to "New Restaurant", new_restaurant_path, class: "btn btn-primary"%>
