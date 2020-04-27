@@ -9,7 +9,7 @@
   <%= f.text_field :phone_number %>
 
   <%= f.label :category %>
-  <%= f.text_field :category %>
+  <%= f.select :category, :collection => Restaurant.categories %>
 
   <%= f.submit %>
 <% end %>
